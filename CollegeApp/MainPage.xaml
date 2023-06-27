@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+			 x:Class="CollegeApp.MainPage"
+			 NavigationPage.HasNavigationBar="False"
+			 StyleClass="contentpage">
+
+	<StackLayout>
+
+		<StackLayout.Resources>
+			<StyleSheet Source="./styles.css" />
+		</StackLayout.Resources>
+
+		<Label Text="Войдите в аккаунт" 
+			   FontSize="Title"
+			   StyleId="header"
+			   HorizontalOptions="Center"            
+			   VerticalOptions="Center"
+			   Padding="30,10,30,0"/>
+
+		<Picker x:Name="myPicker"
+				StyleId="picker"
+				Title="режим работы: (студент/преподователь)"
+				HorizontalOptions="Center"
+				VerticalOptions="Center">
+
+			<Picker.ItemsSource>
+				<x:Array Type="{x:Type x:String}">
+					<x:String>Студент</x:String>
+					<x:String>Преподователь</x:String>
+				</x:Array>
+			</Picker.ItemsSource>
+		</Picker>
+
+		<Entry x:Name="userNameEntry"
+					   FontSize="17"
+					   Margin="20,30,20,0"
+					   Grid.ColumnSpan="3"
+					   Placeholder="Логин"
+					   PlaceholderColor="Gray" 
+					   HorizontalTextAlignment="Center"
+					   MaxLength="20"/>
+		<Entry x:Name="passwordEntry"
+					   FontSize="17"
+					   Margin="20,-5,20,0"
+					   IsPassword="True"
+					   Grid.ColumnSpan="3"
+					   Placeholder="Пароль"
+					   PlaceholderColor="Gray" 
+					   HorizontalTextAlignment="Center"
+					   MaxLength="20"/>
+		<Button x:Name="loginButton"
+				Text="Войти"
+				Margin="20,30,20,0"
+				StyleId="button"
+				Clicked="loginButton_Clicked"/>
+
+		<Button x:Name="registerButton"
+				Text="Регистрация"
+				Margin="20,30,20,0"
+				StyleId="button"
+				Clicked="registerButton_Clicked"/>
+
+	</StackLayout>
+
+</ContentPage>

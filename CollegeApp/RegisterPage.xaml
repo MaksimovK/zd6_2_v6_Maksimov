@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CollegeApp.RegisterPage"
+             StyleClass="contentpage">
+
+    <ContentPage.Resources>
+        <StyleSheet Source="./styles.css"/>
+    </ContentPage.Resources>
+
+    <StackLayout Orientation="Vertical" HorizontalOptions="Center">
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Label x:Name="header"
+                   StyleId="header"
+                   Text="Регистрация"
+                   FontSize="25"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="fullNameEntry"
+                   Placeholder="FullName"
+                   StyleId="entry" Keyboard="Text"
+                   HorizontalOptions="Center"
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <DatePicker x:Name="dateOfBirthDatePicker"
+                        StyleId="entry"
+                        HorizontalOptions="Center"
+                        WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="numberCourseEntry"
+                   StyleId="entry"
+                   Keyboard="Numeric"
+                   HorizontalOptions="Center"
+                   Placeholder="Number of course"
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="loginEntry"
+                   Placeholder="Login"
+                   StyleId="entry" 
+                   HorizontalOptions="Center" 
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="passwordEntry"
+                   Placeholder="Password" 
+                   IsPassword="True" StyleId="entry" 
+                   HorizontalOptions="Center"
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="repitpasswordEntry" 
+                   Placeholder="Repit Password"
+                   IsPassword="True" 
+                   StyleId="entry" 
+                   HorizontalOptions="Center" 
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry x:Name="groupIdEntry"
+                   Placeholder="Group ID"
+                   StyleId="entry" 
+                   Keyboard="Numeric" 
+                   HorizontalOptions="Center" 
+                   WidthRequest="400"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <CheckBox x:Name="budgetCheckBox"  
+                      HorizontalOptions="Center" 
+                      Color="White"/>
+            <Label Text="Бюджет?" 
+                   HorizontalOptions="Center" 
+                   StyleId="label"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <Button x:Name="Regiter" 
+                    StyleId="button" 
+                    Text="Регистрация" 
+                    WidthRequest="400"
+                    Clicked="Regiter_Clicked"/>
+        </StackLayout>
+
+        <StackLayout Orientation="Horizontal" >
+            <Button x:Name ="BackToLogin"
+                    Text="Назад" StyleId="button"
+                    WidthRequest="400"
+                    Clicked="BackToLogin_Clicked"/>
+        </StackLayout>
+
+    </StackLayout>
+</ContentPage>
